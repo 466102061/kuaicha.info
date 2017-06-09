@@ -1,0 +1,120 @@
+<%-include("./base/header.ejs")%>
+
+<script>
+$(function(){
+	$(".nav .nav-items").find(".nav-tab").removeClass("nav-tab-active");
+	$(".nav .nav-items").eq(0).find(".nav-tab").addClass("nav-tab-active");
+	//初始化banner宽度
+	var w = document.body.clientWidth;
+	var len = $("#bNumber >li").length;
+	$("#bFrame").css({"width":w+"px","margin-left":"-"+w/2+"px"});
+	$("#bWrap").css("width",len*w+"px");
+	$("#bWrap .bItem").css("width",w+"px");
+	//banner滚动
+	var index = 1;
+	var adTimer = null;
+	$("#bNumber >li").click(function(){
+		index  =   $("#bNumber >li").index(this);
+		showImg(index);
+	});
+	  //滑入 停止动画，滑出开始动画.
+	 /* $("#bFrame").hover(function(){
+			 clearInterval(adTimer);
+		 },function(){  */
+			 adTimer = setInterval(function(){
+			    showImg(index);
+				index++;
+				if(index==len){index=0;}
+			  } , 5000);
+	 //}).trigger("mouseleave");
+	 // 通过控制left ，来显示不同的幻灯片
+	function showImg(index){
+	        var bWidth = document.body.clientWidth;
+			$("#bWrap").stop(true,false).animate({"margin-left" : -bWidth*index},600);
+			$("#bNumber > li").removeClass("cur")
+				.eq(index).addClass("cur");
+	}
+});
+</script>
+<!--begin banner-->
+<div class="bBlock cbody">
+    <div class="bFrame" id="bFrame">
+        <ul class="bWrap" id="bWrap">
+            <li class="bItem">
+              <div class="zItemBg"></div>
+              <div class="cbody bItemIner">
+                <img alt="征信" src="/images/assets/b01.jpg" />
+               <div class="bProBlockBg"></div>
+                <div class="bProBlock">
+                    <div class="bProItem">
+                        <img src="/images/assets/zIco01.png" />
+                        <h4 class="zTitle">信用报告查询</h4>
+                        <p class="zDesc">数据来自中国人民银行征信中心</p>
+                        <a href="/report" class="bHref"></a>
+                    </div>
+                    <div class="bLine zLine"></div>
+                    <div class="bProItem">
+                        <img src="/images/assets/zIco02.png" />
+                        <h4 class="zTitle">黑名单查询</h4>
+                        <p class="zDesc">近2000万条黑名单数据</p>
+                        <a href="/lawSearch" class="bHref"></a>
+                    </div>
+                    <div class="bLine zLine"></div>
+                    <div class="bProItem">
+                        <img src="/images/assets/zIco03.png" />
+                        <h4 class="zTitle" style="padding-left:86px;">社保查询<span style="font-size:12px;">(服务器调整中...)</span></h4>
+                        <p class="zDesc">全国统一的社保查询入口</p>
+                        <a href="##" class="bHref"></a>
+                    </div>
+                </div>
+              </div>
+            </li>
+            <li class="bItem">
+              <div class="cbody bItemIner">
+                <img alt="老赖" src="/images/assets/b02.jpg" />
+                <div class="bProBlock" style="background-color:#000;">
+                    <div class="bProItem">
+                        <img src="/images/assets/lIco01.png" />
+                        <h4 class="lTitle">查询老赖</h4>
+                        <ul class="lDescBlock">
+                            <li class="lDescItem"><span></span>在线查询老赖名单</li>
+                            <li class="lDescItem"><span></span>一建查询地区老赖榜</li>
+                            <li class="lDescItem"><span></span>助力识破身边老赖伪装</li>
+                        </ul>
+                        <a href="/lawSearch" class="bHref"></a>
+                    </div>
+                    <div class="bLine lLine"></div>
+                    <div class="bProItem">
+                        <img src="/images/assets/lIco02.png" />
+                        <h4 class="lTitle">曝光老赖</h4>
+                        <ul class="lDescBlock">
+                            <li class="lDescItem"><span></span>免费在线曝光老赖</li>
+                            <li class="lDescItem"><span></span>免费短信助力催收</li>
+                            <li class="lDescItem"><span></span>联手金融机构共同抵制老赖</li>
+                        </ul>
+                        <a href="/exposure" class="bHref"></a>
+                    </div>
+                    <div class="bLine lLine"></div>
+                    <div class="bProItem">
+                        <img src="/images/assets/lIco03.png" />
+                        <h4 class="lTitle">催收大厅</h4>
+                        <ul class="lDescBlock">
+                            <li class="lDescItem"><span></span>免费发布债权委托（合法化）</li>
+                            <li class="lDescItem"><span></span>专业催客，委托催收有保障</li>
+                            <li class="lDescItem"><span></span>打造催收新模式，共建诚信社会</li>
+                        </ul>
+                        <a href="http://www.kuaicha.info/debt/debtHall.html" class="bHref" target="_bank"></a>
+                    </div>
+                </div>
+               </div>
+            </li>
+        </ul>
+    </div>
+    <!--  -->
+    <ul class="bNumber" id="bNumber">
+       <li class="cur"></li>
+       <li></li>
+    </ul>
+</div>
+
+<%-include("./base/footer.ejs")%>

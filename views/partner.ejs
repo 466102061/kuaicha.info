@@ -1,0 +1,72 @@
+<%-include("./base/header.ejs")%>
+
+<script>
+$(function(){
+	$(".nav .nav-items").find(".nav-tab").removeClass("nav-tab-active");
+	$(".nav .nav-items").eq(2).find(".nav-tab").addClass("nav-tab-active");
+});
+</script>
+<style>
+.pHeader{position:relative;width:150px;height:20px;border-top:2px solid #535353;margin:40px auto 30px;}
+.pHeader > span{position:absolute;display:block;width:110px;height:20px;line-height:20px;text-align:center;font-size:18px;color:#535353;left:50%;top:50%;margin-left:-55px;margin-top:-20px;background-color:#fff;}
+.pItemWrap{padding-left:110px;padding-bottom:30px;}
+.pItemWrap > li{width:234px;height:62px;float:left;margin-right:50px;margin-bottom:20px;}
+.pItemWrap > li > a{display:block;}
+.pJoinBlock{padding-left:110px;}
+.pJoinItem{float:left;width:452px;height:180px;}
+.pJoinItem li{height:36px;line-height:36px;position:relative;font-size:14px;color:#535353;padding-left:42px;}
+.pJoinItem li:nth-child(1){color:#36425E;font-size:18px;line-height:20px;padding-left:0;}
+.pJoinItem li .pJoinIco{position:absolute;display:block;width:32px;height:32px;left:0;top:1px;}
+.pJoinItem li:nth-child(2) .pJoinIco{background:url(../images/assets/pQQ.png) no-repeat center;}
+.pJoinItem li:nth-child(3) .pJoinIco{background:url(../images/assets/pTel.png) no-repeat center;}
+.pJoinItem li:nth-child(4) .pJoinIco{background:url(../images/assets/pPhone.png) no-repeat center;}
+.pJoinItem li .pJoinName{padding-left:20px;}
+.pBannerBg{    
+	min-width:1024px;
+    width: 100%;
+    height: 180px;
+    background: url(../images/assets/pBg.png) repeat-x;
+}
+body{background-color:#fff;}
+</style>
+<body class="pro-body">
+<input id="authId" name="authId" type="hidden" value='' />
+<div class="pBannerBg">
+   <div class="cbody"><img src="/images/assets/pB.jpg" /></div>
+</div>
+<div class="cbody" style="min-height:554px;">
+    <div class="pHeader"><span>加入我们</span></div>
+    <div class="pJoinBlock clearfix">
+        <ul class="pJoinItem">
+           <li>快查——千万级信用黑名单数据合作</li>
+           <li><span class="pJoinIco"></span>商务合作：bd@kuaicha.info</li>
+           <li><span class="pJoinIco"></span>商务热线：0592-3322737</li>
+           <li><span class="pJoinIco"></span>客户经理：13599509557<span class="pJoinName">曾经理</span></li>
+        </ul>
+        <ul class="pJoinItem">
+           <li style="color:#FF6600;">老赖查询——催收机构合作</li>
+           <li><span class="pJoinIco"></span>商务合作：bd@kuaicha.info</li>
+           <li><span class="pJoinIco"></span>商务热线：0592-3322737</li>
+           <li><span class="pJoinIco"></span>客户经理：13358396015<span class="pJoinName">赖经理</span></li>
+        </ul>
+    </div>
+    <div class="pHeader"><span>合作伙伴</span></div>
+    <ul class="pItemWrap clearfix">
+       <li><a href="http://www.chinatopcredit.com/index/homePage/" target="_bank"><img src="/images/assets/p08.png" /></a></li>
+       <li><a href="https://m.wolaidai.com/" target="_bank"><img src="/images/assets/p06.png" /></a></li>
+       <li><a href="http://www.youyu365.com/" target="_bank"><img src="/images/assets/p05.png" /></a></li>
+       <li><a href="http://www.dishifenqi.com/" target="_bank"><img src="/images/assets/p02.png" /></a></li>
+       <li><a href="http://www.591chedai.com/" target="_bank"><img src="/images/assets/p01.png" /></a></li>
+       <li><a href="http://www.jinr.com/" target="_bank"><img src="/images/assets/p03.png" /></a></li>
+       <li><a href="http://www.cardniu.com/kaniu/" target="_bank"><img src="/images/assets/p04.png" /></a></li>
+       <li><a href="http://udcredit.com/#/" target="_bank"><img src="/images/assets/p07.png" /></a></li>
+       <li><a href="https://at.umeng.com/9PjW5D" target="_bank"><img src="/images/assets/p09.png" /></a></li>
+       <li><a href="https://at.umeng.com/1zSPHv" target="_bank"><img src="/images/assets/p10.png" /></a></li>
+       <li><a href="https://at.umeng.com/mCiSbi" target="_bank"><img src="/images/assets/p11.png" /></a></li>
+       <li><a href="https://at.umeng.com/5HTLrq" target="_bank"><img src="/images/assets/p12.png" /></a></li>
+       <li><a href="https://at.umeng.com/rqS1nq" target="_bank"><img src="/images/assets/p13.png" /></a></li>
+    </ul>
+</div>
+<!--end content-->
+
+<%-include("./base/footer.ejs")%>

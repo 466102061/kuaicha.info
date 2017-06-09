@@ -1,0 +1,451 @@
+@charset "utf-8";
+
+html {
+	-webkit-text-size-adjust: none
+}
+
+*html {
+	background-image: url(about:blank);
+	background-attachment: fixed
+}
+
+body,p,h1,h2,h3,h4,h5,h6,dd,dl,dt,th,td,ul,li,ol,form,input,select,textarea,button,pre,legend {
+	margin: 0;
+	padding: 0
+}
+
+button,input,select,textarea {
+	vertical-align: middle
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-size: 100%
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+img,fieldset {
+	border: 0
+}
+
+address,cite,dfn,em,var,i,samp {
+	font-style: normal
+}
+
+ul,ol {
+	list-style-type: none
+}
+
+sup {
+	vertical-align: text-top
+}
+
+sub {
+	vertical-align: text-bottom
+}
+
+a {
+	text-decoration: none
+}
+
+a:hover {
+	text-decoration: underline
+}
+
+a:active {
+	text-decoration: underline
+}
+
+a:focus {
+	text-decoration: underline
+}
+
+.fl {
+	float: left
+}
+
+.fr {
+	float: right
+}
+
+.clear {
+	clear: both
+}
+
+.clearfix {
+	+display: inline-block
+}
+
+* html .clearfix {
+	height: 1%
+}
+
+.clearfix:after {
+	clear: both;
+	content: '';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0
+}
+
+body {
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #1b1e25;
+	background-color:#fff;
+}
+
+.cbody {
+	width: 1024px;
+	margin: 0 auto
+}
+
+.index-background-color {
+	width: 100%;
+	height: 100%;
+	background-color: #e9edf5;
+}
+
+.text-center {
+	text-align: center
+}
+
+.mtr {
+	padding-right: 20px;
+	text-align: right
+}
+
+.font-weight {
+	font-weight: bold
+}
+
+.support-city-ico,.doc-ico-arrow,.select-ico,.load-history-ico,.case-ico-round,.proBtnIcoRound {
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: -webkit-transform .25s ease-in-out;
+	-moz-transition: -moz-transform .25s ease-in-out;
+	-o-transition: -o-transform .25s ease-in-out;
+	-ms-transition: -ms-transform .25s ease-in-out;
+	transition: transform .25s ease-in-out
+}
+
+.support-city-title-bg .support-city-ico,.doc-nav-cur .doc-ico-arrow,.form-select-cur .select-ico,.load-history-des .load-history-ico-cur,.case-ico-round-cur,.proBtnBgCur .proBtnIcoRound{
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg)
+}
+
+.load-history-ico,.platform-ico-ios,.form-ico-ipad,.apps-ico-ipad,.platform-ico-android,.platform-ico-pc,.doc-ico-round,.doc-ico-arrow,.doc-ico-ios,.doc-ico-android,.doc-ico-pc,.down-load-ico1,.apps-ico-ios,.down-load-ico2,.apps-ico-android,.down-load-ico3,.apps-ico-pc,.scrollTop,.select-ico,.doc-btn-search,.form-ico-checked,.form-ico-iso,.ico-checkBox,.online-ico-register,.report-checkbox-ico,.form-ico-android,.form-ico-pc,.ico-clock,.ico-verify-question,.verify-choice-ico,.ico-ios,.online-ico-result,.ico-android,.online-ico-text,.ico-pc,.ico-acount,.ab-ico-round,.ico-contact,.help-ico,.ico-email,.online-ico-title,.report-heading-ico,.btn-close,.mask-ico,.form-ico-android,.form-ico-pc,.down-load-title-ico {
+	background-image: url(../img/ico.png);
+	background-repeat: no-repeat;
+	overflow: hidden
+}
+
+.ico-iso {
+	position: absolute;
+	display: block;
+	width: 18px;
+	height: 20px
+}
+
+.ico-android {
+	position: absolute;
+	display: block;
+	width: 20px;
+	height: 20px
+}
+
+.ico-pc {
+	position: absolute;
+	display: block;
+	width: 20px;
+	height: 18px
+}
+
+.btn {
+	display: block;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	background-color: #38425c;
+	font-size: 14px;
+	color: #fefefe;
+	text-decoration: none;
+	font-family: "微软雅黑";
+	border-radius: 3px;
+	border: 0;
+	cursor: pointer;
+	outline: 0;
+	-webkit-text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+	-moz-box-shadow: 0 -1px 0 rgba(0,0,0,.2);
+	text-shadow: 0 -1px 0 rgba(0,0,0,.2)
+}
+
+.btn:hover,.content-btn-more:hover {
+	text-decoration: none;
+	background-color: #5b616c
+}
+
+.mask-bg,.mask-yes-or-not-wrap,.mask-credit-out-wrap,.mask-verify-quest-wrap,.mask-bg-wrap {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	_position: absolute;
+	_left: expression(eval(document.documentElement.scrollLeft));
+	_top: expression(eval(document.documentElement.scrollTop));
+	background: url(../img/mask-bg.png) repeat;
+	z-index: 990;
+}
+
+.mask-tips-wrap {
+	width: 320px;
+	height: 240px;
+	padding: 1px 8px 14px 6px;
+	margin: 210px auto 0;
+	background: url(../img/tips-bg2.png) no-repeat center top
+}
+
+.mask-loding {
+	width: 100px;
+	height: 100px;
+	margin: 260px auto 0;
+	background-size: 100px;
+	border-radius: 4px;
+	background: url(../img/loading.gif) no-repeat center
+}
+
+.mask-ico-wrap {
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 8px;
+	height: 90px
+}
+
+.mask-ico {
+	display: inline-block;
+	width: 90px;
+	height: 90px
+}
+
+.mask-ico-correct {
+	background-position: -118px -35px
+}
+
+.mask-ico-warning {
+	background-position: -211px -35px
+}
+
+.mask-ico-quest {
+	background-position: -305px -35px
+}
+
+.mask-tips-msg {
+	padding:0 10px;
+	text-align: center;
+	color: #393f4f;
+	font-size: 14px
+}
+
+.mask-tips-btn {
+	padding-left: 108px;
+	padding-top: 15px
+}
+
+.btn-wrap {
+	position: relative;
+	height: 40px;
+	border-bottom: 1px solid #dadada
+}
+
+.btn-close {
+	position: absolute;
+	top: 6px;
+	right: 6px;
+	display: block;
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+	border-radius: 50%;
+	background-position: -310px -5px
+}
+
+.btn-close:hover {
+	background-position: -281px -5px;
+	border: 1px solid #dadda;
+	border: none \9;
+	border: none \0
+}
+
+.scrollTop {
+	display: block;
+	width: 34px;
+	height: 34px;
+	position: fixed;
+	_position: absolute;
+	bottom: 200px;
+	left: 50%;
+	margin-left: 530px;
+	background-position: -152px -311px
+}
+
+.scrollTop:hover {
+	background-position: -114px -311px
+}
+
+.pad-body {
+	padding-bottom: 50px
+}
+/*placeholder css*/
+input::-webkit-input-placeholder {
+    color:#bababa;
+}
+input::-moz-placeholder {
+    color:#bababa;
+}
+input:-ms-input-placeholder{
+    color:#bababa;
+}
+input::-o-input-placeholder{
+    color:#bababa;
+}
+.btn-pre{
+	float:left;
+	margin-left:20px;
+	margin-top:4px;
+	color:#1b1e25;
+	font-size:14px;
+	text-decoration:none;
+}
+.btn-pre:hover{
+	color: #4198f9;
+    text-decoration: none;
+}
+.mask-credit-tips-content{
+	height:130px;
+	margin-bottom:10px;
+	border-bottom:1px solid #dadada;
+}
+.mask-credit-title{
+	color:#393f4f;
+	text-align:center;
+	font-size:18px;
+	padding:22px 0;
+}
+.mask-input{
+	display: block;
+	float: left;
+	width: 140px;
+	padding:9px 14px;
+	line-height:20px;
+	font-size: 14px;
+	color: #393f4f;
+	margin-right:6px;
+	font-family: "微软雅黑";
+	border: 1px solid #dadada;
+	outline: none;
+}
+.mask-input:focus {
+  border: 1px solid #4198f9;
+}
+.mask-verify-code{
+	display:block;
+	float:left;
+	width:96px;
+	height:40px;
+	cursor:pointer;
+	margin-left:10px;
+}
+.mask-verify-code img{
+	width:96px;
+	height:40px;
+	background-size:96px 40px;
+}
+.mask-tips-wrap,.mask-credit-tips,.mask-credit-verify-tips,.mask-yes-or-not{
+	width:320px;
+	height:240px;
+	padding:1px 8px 14px 6px;
+	margin:210px auto 0;
+	background:url(../img/tips-bg2.png) no-repeat center top;
+}
+.mask-iner-wrap{
+	width:330px;
+	min-height:210px;
+	height:auto !important;
+	height:210px;
+	overflow: visible;
+	padding:1px 0 24px 0;
+	margin:210px auto 0;
+	border-radius:6px;
+	background:#fff;
+}
+/*compatibility↓*/
+.compatibility-bg{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(../img/mask-bg.png) repeat;
+	box-sizing: border-box;
+	z-index: 999;
+}
+.compatibility-wrap {
+	margin:15% auto;
+	box-sizing: border-box;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 20px;
+	max-width: 350px;
+	min-width: 250px;
+	position: relative;
+}
+.compatibility-inner {
+	box-sizing: border-box;
+	padding-top: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background: white;
+	position: relative;
+	text-align: center;
+	line-height: 20px;
+}
+.compatibility-content {
+	min-height:80px;
+	padding:15px;
+	background-color:honeydew;
+	color:black;
+	text-align: left;
+	font-size: 15px;
+	line-height:24px;
+	box-sizing: border-box;
+	word-spacing: 10px;
+}
+.compatibility-content span{
+	color: red;
+	font-size: 16px;
+}
+.compatibility-btn{
+	font-size: 16px;
+	width: 104px;
+	height: 30px;
+	color: white;
+	background: #f47119;
+	margin: 15px auto 10px;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+}

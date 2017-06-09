@@ -1,0 +1,28 @@
+<%-include("./base/header.ejs")%>
+
+<style type="text/css">
+.expBody .expPic{margin:60px auto;display:block;}
+.expBtn{display:block;width:350px;height:36px;margin:0 auto;text-align:center;line-height:36px;background:#FF6600;border-radius:6px;font-size:14px;color:#fff;text-decoration:none;}
+.expBtn:hover{text-decoration:none;}
+.expDesc{padding:30px 0 60px 380px;color:#535353;font-size:12px;line-height:20px;}
+.expDesc > li{height:20px;margin-bottom:5px;position:relative;padding-left:15px;}
+.expDesc .expRound{display:block;width:6px;height:6px;background:#535353;border-radius:50%;position:absolute;left:0;top:50%;margin-top:-3px;}
+</style>
+<script>
+$(function(){
+	$(".nav .nav-items").find(".nav-tab").removeClass("nav-tab-active");
+	$(".nav .nav-items").eq(1).find(".nav-tab").addClass("nav-tab-active");
+});
+</script>
+<!--begin content-->
+<div class="cbody expBody" style="min-height:514px;">
+    <img src="/images/assets/bgpic.jpg" class="expPic" />
+    <a href="/exposureForm" target="_bank" class="expBtn">我要举报</a>
+    <ul class="expDesc">
+       <li><span class="expRound"></span>举报人和出借人必须为同一个人才能进行举报</li>
+       <li><span class="expRound"></span>严格保密举报人的信息</li>
+    </ul>
+</div>
+<!--end content-->
+
+<%-include("./base/footer.ejs")%>

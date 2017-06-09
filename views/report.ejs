@@ -1,0 +1,29 @@
+<%-include("./base/header.ejs")%>
+
+<style type="text/css">
+.creditIndex{padding-top:100px;text-align:center;}
+.creditIndex .clogo{margin-bottom:30px;}
+.creditIndex .cDesc{font-size:14px;color:#36425E;line-height:26px;}
+.creditIndex .cBtn{display:block;width:350px;height:40px;text-align:center;line-height:40px;margin:30px auto;text-decoration: none;font-size:16px;border-radius:6px;}
+.creditIndex .cBtn:nth-child(even){background-color:#36425e;color:#fff;margin-top:60px;}
+.creditIndex .cBtn:nth-child(odd){background-color:#fff;color:#36425e;border:1px solid #36425e;}
+.creditIndex .cBtn:hover{text-decoration: none;}
+</style>
+<script>
+$(function(){
+	$(".nav .nav-items").find(".nav-tab").removeClass("nav-tab-active");
+	$(".nav .nav-items").eq(1).find(".nav-tab").addClass("nav-tab-active");
+});
+</script>
+<input id="authId" name="authId" type="hidden" value='' />
+<!--begin content-->
+<div class="cbody creditIndex" style="height:514px;">
+    <img src="/images/assets/zLogo.png" class="clogo" />
+    <p class="cDesc">我们提供详细的个人信用报告信息</p>
+    <p class="cDesc">辅助金融企业进行业务判断</p>
+    <a href="http://www.kuaicha.info/mobile/credit/creditRegister.html" target="_bank" class="cBtn">首次开通个人信用查询</a>
+    <a href="http://www.kuaicha.info/mobile/credit/creditLogin.html" target="_bank" class="cBtn">已有账号，请登录</a>
+</div>
+<!--end content-->
+
+<%-include("./base/footer.ejs")%>

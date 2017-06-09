@@ -1,0 +1,99 @@
+<%-include("./base/header.ejs")%>
+
+<style>
+.sidebarNav{width:150px;height:180px;background: #F4F5F5;box-shadow:0 8px 12px rgba(54,66,94,0.2);float:left;}
+.sidebarNav > li {width:150px; height:59px;border-bottom:1px solid #e4e4e4;font-size:16px;color:#535353;text-align:center;line-height:60px;cursor:pointer;}
+.sidebarNav > li:last-child{border-bottom:none;}
+.sidebarNav > li:nth-child(1).cur,.sidebarNav > li:nth-child(3).cur{background-color:#36425E;color:#fff;}
+.sidebarNav > li:nth-child(2).cur{background-color:#FF6600;color:#fff;}
+.sidebarBody{padding:20px 50px;min-height:200px;width:774px;float:left;font-size:14px;}
+.sidebarBody .sTitile1,.sidebarBody .sTitile2,.sidebarBody .sTitile3{display:inline-block;margin-bottom:15px;height:40px;line-height:40px;padding:0 10px;font-size:18px;border-bottom-left-radius:12px;border-top-right-radius:12px;border-bottom-right-radius:12px;}
+.sidebarBody .sTitile1{color:#36425E;border:1px solid #36425E;}
+.sidebarBody .sTitile2{color:#FF6600;border:1px solid #FF6600;}
+.sidebarBody .sTitile3{color:#fff;background-color:#36425e;}
+.sidebarBody .section{color:#232323;line-height:30px;}
+.sidebarBody .section .cline{position:absolute;display:block;width:26px;height:1px;background:#36425E;left:170px;top:16px;}
+.sidebarBody .cB{color:#36425E;}
+.sidebarBody .lB{color:#FF6600;}
+</style>
+<input id="authId" name="authId" type="hidden" value='' />
+
+<div class="cbody" style="min-height:624px;">
+    <div class="clearfix">
+         <!--菜单-->
+         <ul id="sidebarNav" class="sidebarNav">
+             <li class="cur" flag="0">快查</li>
+             <li flag="1">老赖</li>
+             <li flag="2">联系我们</li>
+         </ul><!--菜单-->
+         <!--正文-->
+         <div class="sidebarBody" id="sidebarBody">
+              <!-- 快查 -->
+              <div>
+                  <span class="sTitile1">什么是“快查”？</span>
+                  <p class="section" style="margin-bottom:25px;">快查，厦门拓客金融技术服务有限公司旗下，中国第一家互联网征信技术服务平台，致力于为广大金融机构提供高效、便捷的互联网征信技术工具，协助金融机构在互联网时代摆脱地域限制、有效拓宽服务范围、大幅提升业务效率。</p>
+                  <span class="sTitile1">“快查”能为你做什么？</span>
+                  <p class="section"><b class="cB">社保查询引擎：</b>该引擎旨在统一全国社保查询，并通过智能数据分析个人的社保信息，得出社保连续缴交月数、工作单位变动次数等关键数据，为金融企业提供重要业务判断依据，可方便接入电子化流程，大幅提高业务审核效率。</p>
+                  <p class="section"><b class="cB">信用报告查询引擎：</b>该引擎支持用户在线便捷查询央行的个人信用报告。金融机构通过免费集成该引擎到自家的业务流程中，即可高效获取客户信用报告，免去传统需要到征信网点打印信用报告的麻烦。并且，通过智能分析信用报告，可快速筛选出优质客户，大大提升了金融业务的效率和质量。</p>
+                  <p class="section"><b class="cB">信用黑名单：</b>拥有近2000万条“信用黑名单”，数据来源于：银行、法院、P2P网贷、小贷公司等金融机构及私人实名举报，旨在为金融企业识别老赖，降低业务风险，全力打造最全“信用黑名单”查询平台。</p>
+                  <p class="section" style="text-align:center;margin-top:15px;position:relative;"><b class="cB">另有更多征信工具正在研发中，将陆续推出，敬请期待...</b><span class="cline"></span></p>
+              </div>
+               <!-- 快查 -->
+              <!-- 老赖 -->
+              <div style="display:none;">
+                  <span class="sTitile2">什么是“老赖”？</span>
+                  <p class="section" style="margin-bottom:25px;">老赖是指欠了别人钱迟迟不还的人。</p>
+                  <span class="sTitile2">什么是“老赖查询”？</span>
+                  <p class="section">老赖查询，是厦门拓客金融技术服务有限公司旗下，通过平台化的互联网方式整合非银行类金融机构（消费金融、P2P、小额贷款、融资租赁、民间机构）和催收服务机构（专业催收服务公司、咨询管理服务公司、有清收服务的律师事务所等），并利用大数据系统化的提供查询、曝光、发布债权委托等服务。解决了信息不对称，实现标准化精准催收的实用平台。</p>
+                  <p class="section" style="margin-bottom:25px;">老赖查询致力于共建诚信社会。未来将继续加大资源整合力度，逐步优化产品服务，进一步扩大在行业内的领先优势，为用户提供更优质的服务与产品体验，让老赖能在大数据下无所遁形。</p>
+                  <span class="sTitile2">“老赖查询”能为你做什么？</span>
+                  <p class="section"><b class="lB">老赖查询：</b>权威提供老赖名单在线查询，通过姓名即可识破老赖伪装。</p>
+                  <p class="section">【老赖查询收录的信息】</p>
+                  <p class="section">1、全国法院被执行人信息；</p>
+                  <p class="section">2、全国法院失信被执行人信息；</p>
+                  <p class="section">3、各级法院（仲裁机构）的裁判文书；</p>
+                  <p class="section">4、金融机构提交的逾期债务人信息；</p>
+                  <p class="section">5、个人举报的逾期还款欠款人信息(需核实)。</p>
+                  <p class="section"><b class="lB">老赖曝光：</b>经平台曝光的“老赖”平台将会把信息共享给各个合作机构，让“老赖”借贷无门，防止 “老赖” 继续诈骗。</p>
+                  <p class="section"><b class="lB">债权委托：</b>平台借助来自社会各阶层领域的多元力量，将专业的人脉资源通过平台整合起来，对欠债通过合法的手段精准发力，通过更专业更有渗透性的方式，为您全方位追击债务人，让您告别那些久催无果的陈年 “坏账” “死账” 苦恼！</p>
+              </div>
+               <!-- 老赖 -->
+              <!-- 联系我们 -->
+              <div style="display:none;">
+              	   <span class="sTitile3">合作</span>
+              	   <p class="section" style="margin-bottom:25px;">商务合作：bd@kuaicha.info<span style="padding-left:170px;">商务热线：0592-3322737</span></p>
+              	   <span class="sTitile3">支持</span>
+              	   <p class="section">在线咨询QQ：3516508538<span style="padding-left:170px;">商务咨询QQ：2235512016</span></p>
+              	   <p class="section" style="margin-bottom:25px;">客服热线：400-998-6399</p>
+              	   <span class="sTitile3">地址</span>
+              	   <p class="section">公司名称：厦门拓客金融技术服务有限公司</p>
+              	   <p class="section" style="margin-bottom:5px;">公司地址：厦门市思明区龙山南路191号G3创意空间109室</p>
+              	   <img src="/images/img-address.png" alt="公司地址">
+              </div>
+               <!-- 联系我们 -->
+         </div>
+    </div>
+</div>
+<script>
+$(function(){
+	$(".nav .nav-items").find(".nav-tab").removeClass("nav-tab-active");
+	$(".nav .nav-items").eq(4).find(".nav-tab").addClass("nav-tab-active");
+	document.title="关于我们";
+	/**********
+	*****我的应用选项卡**
+	*************/
+	$("#sidebarNav > li").click(function(){
+		var index=$("#sidebarNav > li").index(this);
+		$(this).addClass("cur").siblings().removeClass("cur");
+		$("#sidebarBody > div").eq(index).show().siblings().hide();
+	});
+	var flag = getLocationHrefFlag("f");
+	if(flag && flag < 3){
+		$("#sidebarNav > li").eq(flag).addClass("cur").siblings().removeClass("cur");
+		$("#sidebarBody > div").eq(flag).show().siblings().hide();
+	}
+});
+</script>
+<!--end content-->
+
+<%-include("./base/footer.ejs")%>
